@@ -1,14 +1,4 @@
-
-
-// ⇩  ⇩  ⇩  ⇩  ⇩  ⇩  ⇩  ⇩  ⇩  ⇩  ⇩  ⇩  ⇩  ⇩  ⇩  ⇩  ⇩  ⇩  ⇩  ⇩  ⇩  ⇩  ⇩  ⇩  ⇩  ⇩  ⇩  ⇩  ⇩  ⇩  ⇩  ⇩  ⇩  ⇩  ⇩  ⇩  ⇩  ⇩  ⇩
-// DO NOT ALTER THE TEXT BETWEEN THESE LINES =========={M{E{R{L{I{N{1}N}I}L}R}E}M}=====================================
-let unsortedIntegers = [5, 1, 4, 2, 8]
-// DO NOT ALTER THE TEXT BETWEEN THESE LINES =========={M{E{R{L{I{N{1}N}I}L}R}E}M}=====================================
-// ⇧  ⇧  ⇧  ⇧  ⇧  ⇧  ⇧  ⇧  ⇧  ⇧  ⇧  ⇧  ⇧  ⇧  ⇧  ⇧  ⇧  ⇧  ⇧  ⇧  ⇧  ⇧  ⇧  ⇧  ⇧  ⇧  ⇧  ⇧  ⇧  ⇧  ⇧  ⇧  ⇧  ⇧  ⇧  ⇧  ⇧  ⇧  ⇧
-
-
-// Add your code below:
-func swap(integers: inout [Int], firstIndex: Int, secondIndex: Int) {
+func swap(integers: inout [String], firstIndex: Int, secondIndex: Int) {
     precondition(integers.count > firstIndex, "firstIndex is out of range fi=\(firstIndex) max=\(integers.count)")
     precondition(integers.count > firstIndex, "secondIndex is out of range si=\(firstIndex) max=\(integers.count)")
 
@@ -18,7 +8,7 @@ func swap(integers: inout [Int], firstIndex: Int, secondIndex: Int) {
 
 }
 
-func sort(array: inout [Int]) {
+func sort(array: inout [String]) {
     var i: Int = 0
     var amountSorted = 0
     var pass = 0
@@ -35,17 +25,11 @@ func sort(array: inout [Int]) {
                 }
         }
         amountSorted += i
-        printPass(on: pass, i:i, amountSorted:amountSorted, array:array)
     } while (i != 0)
 }
 
+var array = readInput()
 
-//Pass: 1, Swaps: 3/3, Array: [1, 4, 2, 5, 8]
-func printPass(on: Int, i: Int, amountSorted: Int, array: [Int]){
-    print("Pass: \(on), Swaps: \(i)/\(amountSorted), Array: \(array)")
-}
-
-var array = unsortedIntegers
-
-printPass(on: 0, i: 0, amountSorted: 0, array: array)
 sort(array: &array)
+
+print(array)
