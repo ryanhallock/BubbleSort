@@ -17,3 +17,4 @@ do
 done
 
 createSharedLink 'shared.swift'
+createSharedLink '.gitignore'
